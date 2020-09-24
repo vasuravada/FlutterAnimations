@@ -40,3 +40,27 @@ class Page1 extends StatelessWidget {
     );
   }
 }
+
+
+/*
+  Normal Page Route:
+
+  Route route = MaterialPageRoute(builder:(context)=>Page2());
+  Navigator.of(context).push(route);
+
+
+  Custom PageRoute:
+
+   Navigator.of(context).push(_createRoute());
+
+ Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation)=> Page2(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child){
+        return child;
+      }
+    );
+  }
+
+
+ */
